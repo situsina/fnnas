@@ -394,8 +394,8 @@ chroot_fnnas() {
     # 1. Boot files
     cp -rf "${tmp_fnnas}/boot/"*${kernel_version} "${tmp_outpath}/boot/"
     # 2. DTB files
-    cp -rf "${fnnas_dtbs}/${platform_name}/"* "${tmp_outpath}/dtb/"
     cp -rf "${tmp_fnnas}/boot/dtb/${platform_name}/"* "${tmp_outpath}/dtb/"
+    cp -rf "${fnnas_dtbs}/${platform_name}/"* "${tmp_outpath}/dtb/"
     # 3. Modules
     cp -rf "${tmp_fnnas}/usr/lib/modules/${kernel_version}" "${tmp_outpath}/modules/"
     # 4. Headers
